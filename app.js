@@ -43,12 +43,14 @@ app.use("/",indexRoutes)
 
 
 mongoose.Promise=global.Promise;
-mongoose.connect("mongodb://fire:fireisfire@ds155684.mlab.com:55684/camp22",{useMongoClient:true});
+   mongoose.connect("mongodb://homer:homer@ds157964.mlab.com:57964/camp",{useMongoClient:true});
 // mongoose.connect("mongodb://localhost/yelp_camp",{useMongoClient:true});
-
+// mongodb://homer:homer@ds157964.mlab.com:57964/camp
  
 app.listen(process.env.PORT,process.env.IP,function(){
     console.log("cAmP gRoUnD Server Started :)");
 })
      
     
+    
+ 

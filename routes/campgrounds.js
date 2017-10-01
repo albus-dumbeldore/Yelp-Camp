@@ -16,14 +16,15 @@ router.get("/",function(req,res){
         // res.render("campground",{campgrounds:campgrounds});
 });
 router.post("/",middleware.isLoggedIn,function(req,res){
-    var name=req.body.name;
+    var name =req.body.name;
+    var price=req.body.price;
     var image=req.body.image;
-    var desc=req.body.description;
+    var desc =req.body.description;
     var author={
         id:req.user._id,
         username:req.user.username
     }
-    var newCampground={name:name,image:image,description:desc,author:author};
+    var newCampground={name:name,price:price,image:image,description:desc,author:author};
     // campgrounds.push(newCampground);
     Campground.create(newCampground,function(err,newlyCampground){
         if(err){
@@ -33,7 +34,7 @@ router.post("/",middleware.isLoggedIn,function(req,res){
             console.log(err);
         }
         else{
-            console.log(newlyCampground)
+           
             res.redirect("/campgrounds");
         }
     })
