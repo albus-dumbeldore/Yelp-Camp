@@ -43,7 +43,8 @@ app.use("/",indexRoutes)
 
 
 mongoose.Promise=global.Promise;
-mongoose.connect("mongodb://localhost/yelp_camp",{useMongoClient:true});
+mongoose.connect("mongodb://fire:fireisfire@ds155684.mlab.com:55684/camp22",{useMongoClient:true});
+// mongoose.connect("mongodb://localhost/yelp_camp",{useMongoClient:true});
 
  
 app.listen(process.env.PORT,process.env.IP,function(){
