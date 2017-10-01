@@ -43,7 +43,8 @@ app.use("/",indexRoutes)
 
 
 mongoose.Promise=global.Promise;
-   mongoose.connect("mongodb://homer:homer@ds157964.mlab.com:57964/camp",{useMongoClient:true});
+
+   mongoose.connect(process.env.DATABASEURL,{useMongoClient:true});
 // mongoose.connect("mongodb://localhost/yelp_camp",{useMongoClient:true});
 // mongodb://homer:homer@ds157964.mlab.com:57964/camp
  
