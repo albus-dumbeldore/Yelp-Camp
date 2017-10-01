@@ -50,7 +50,7 @@ body{
      animation-delay: 30s;
 }
 .slideshow li:nth-child(5){
-    background-image: url(https://i.imgur.com/TVGe0Ef.jpg);
+    background-image: url(https://images.unsplash.com/photo-1475483768296-6163e08872a1?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop=);
      animation-delay: 40s;
 }
 
