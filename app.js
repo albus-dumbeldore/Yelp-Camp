@@ -17,8 +17,7 @@ var campgroundRoutes=require("./routes/campgrounds"),
 app.use(bodyParser.urlencoded({extended:true})); 
 app.set("view engine","ejs");
 app.use(express.static(__dirname +"/public"))
-//  console.log(__dirname)
-// seedDB();  // now we seed actual DB
+
 app.use(methodOverride("_method"));
 app.use(flash());
 app.use(require("express-session")({
