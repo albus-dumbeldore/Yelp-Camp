@@ -26,12 +26,7 @@ router.post("/", middleware.isLoggedIn, function(req, res){
   }
   var price = req.body.price;
   geocoder.geocode(req.body.location, function (err, data) {
-      if(err){
-          console.log(err)
-      }
-      else{
-          
-     
+        
     var lat = data.results[0].geometry.location.lat;
     var lng = data.results[0].geometry.location.lng;
     var location = data.results[0].formatted_address;
@@ -43,12 +38,12 @@ router.post("/", middleware.isLoggedIn, function(req, res){
             req.flash("error","Something went wrong")
         } else {
             //redirect back to campgrounds page
-            console.log(newlyCreated);
+            
             req.flash("success","Successfully created New Campground")
             res.redirect("/campgrounds");
         }
     });
-      }
+      
   });
 });
 router.get("/new",middleware.isLoggedIn,function(req,res){
@@ -81,12 +76,7 @@ router.get("/:id/edit",middleware.checkCampgroundOwnership,function(req, res) {
 })
 router.put("/:id", function(req, res){
   geocoder.geocode(req.body.location, function (err, data) {
-      if(err){
-          console.log(err)
-      }
-      else{
-          
-      
+         
     var lat = data.results[0].geometry.location.lat;
     var lng = data.results[0].geometry.location.lng;
     var location = data.results[0].formatted_address;
@@ -101,7 +91,7 @@ router.put("/:id", function(req, res){
             res.redirect("/campgrounds/" + campground._id);
         }
     });
-      }
+   
   });
 });
 router.delete("/:id",middleware.checkCampgroundOwnership,function(req,res){
