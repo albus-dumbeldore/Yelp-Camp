@@ -96,6 +96,7 @@ router.put("/:id", function(req, res){
             req.flash("error", err.message);
             res.redirect("/campgrounds/" + campground._id);
         } else {
+            
             req.flash("success","Successfully Updated!");
             res.redirect("/campgrounds/" + campground._id);
         }
