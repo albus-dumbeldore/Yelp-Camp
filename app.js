@@ -41,7 +41,6 @@ app.use("/campgrounds",campgroundRoutes)
 app.use("/campgrounds/:id/comments",commentRoutes)
 app.use("/",indexRoutes)
 
-
 mongoose.Promise=global.Promise;
 
 mongoose.connect(process.env.DATABASEURL,{useMongoClient:true});
