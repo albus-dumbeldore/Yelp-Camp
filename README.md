@@ -9,5 +9,6 @@ This is the Demo Site in which you can upload  different Camping places you visi
   - Successfully deployed to Heroku Servers =>  https://radiant-anchorage-97923.herokuapp.com/
   - Database Used : mongoLab/mLab
 IDE      :Cloud 9
-Framework:nodejs
+Framework:Expressjs
+Platform: Nodejs
                   
